@@ -13,6 +13,9 @@ struct ActiveNowView: View {
             HStack(spacing: 32) {
                 ForEach( 0 ... 10, id: \.self) { _ in
                     VStack {
+                        // Push online circle to trailing bottom
+                        // Thang nao frame nho hon 64 thi bi push
+                        // Vi ZStack co frame 63 cua Image.
                         ZStack(alignment: .bottomTrailing) {
                             Image(systemName: "person.circle")
                                 .resizable()

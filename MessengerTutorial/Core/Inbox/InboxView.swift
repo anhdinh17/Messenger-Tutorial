@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct InboxView: View {
+    @State private var showNewMessageView = false
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 ActiveNowView()
                 
+                // As of Aug 05, 2024
+                // List acts strangly in ScrollView
+                // Gotta have .listStyle and .frame so it can display
                 List {
                     ForEach(0 ... 10, id:\.self) { _ in
                         InboxRowView()
@@ -21,6 +26,11 @@ struct InboxView: View {
                 .listStyle(.plain)
                 .frame(height: UIScreen.main.bounds.height - 120)
             }
+            // Show New Message View
+            // This is like modal present, not a Navigation push
+            .fullScreenCover(isPresented: $showNewMessageView, content: {
+                NewMessageView()
+            })
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     HStack {
@@ -34,7 +44,7 @@ struct InboxView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        
+                        showNewMessageView.toggle()
                     }label: {
                         Image(systemName: "square.and.pencil.circle.fill")
                             .resizable()
