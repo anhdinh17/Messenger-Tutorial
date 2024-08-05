@@ -12,6 +12,7 @@
 		670AC0122C5FBE5100A3C159 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 670AC0112C5FBE5100A3C159 /* Assets.xcassets */; };
 		670AC0152C5FBE5100A3C159 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 670AC0142C5FBE5100A3C159 /* Preview Assets.xcassets */; };
 		6768B8BD2C5FC519007451DC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768B8BC2C5FC519007451DC /* LoginView.swift */; };
+		6768B8BF2C60A252007451DC /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768B8BE2C60A252007451DC /* RegistrationView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		670AC0112C5FBE5100A3C159 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		670AC0142C5FBE5100A3C159 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6768B8BC2C5FC519007451DC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		6768B8BE2C60A252007451DC /* RegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				6768B8BC2C5FC519007451DC /* LoginView.swift */,
+				6768B8BE2C60A252007451DC /* RegistrationView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				6768B8BD2C5FC519007451DC /* LoginView.swift in Sources */,
 				670AC0102C5FBE4C00A3C159 /* ContentView.swift in Sources */,
 				670AC00E2C5FBE4C00A3C159 /* MessengerTutorialApp.swift in Sources */,
+				6768B8BF2C60A252007451DC /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
