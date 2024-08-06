@@ -10,12 +10,14 @@ import PhotosUI
 
 struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
+    let user: User
     
     var body: some View {
         VStack {
             // Profile Image
             // Select a photo from Photo Library
             PhotosPicker(selection: $viewModel.selectedItem) {
+                // If we select a photo from photo library
                 if let profileImage = viewModel.profileImage {
                     profileImage
                         .resizable()
@@ -24,14 +26,15 @@ struct ProfileView: View {
                         .clipShape(Circle())
                 } else {
                     // If there's no image selected
-                    Image(systemName: "person.circle.fill")
+                    Image(user.profileImageURL ?? "")
                         .resizable()
+                        .scaledToFill()
                         .frame(width: 80, height: 80)
-                        .foregroundStyle(Color(.systemGray4))
+                        .clipShape(Circle())
                 }
             }
             
-            Text("Bruce Wayne")
+            Text(user.fullname)
                 .font(.title2)
                 .fontWeight(.semibold)
             
@@ -73,5 +76,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(user: User.MOCK_USER)
 }

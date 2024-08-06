@@ -11,8 +11,7 @@ import SwiftUI
 struct MessengerTutorialApp: App {
     var body: some Scene {
         WindowGroup {
-            //ContentView()
-            ProfileView()
+            ContentView()
         }
     }
 }
