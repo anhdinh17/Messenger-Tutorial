@@ -17,6 +17,8 @@
 		6768B8C52C60B558007451DC /* ActiveNowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768B8C42C60B558007451DC /* ActiveNowView.swift */; };
 		6768B8C72C60C45A007451DC /* InboxRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768B8C62C60C45A007451DC /* InboxRowView.swift */; };
 		6768B8CA2C610AEE007451DC /* NewMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768B8C92C610AEE007451DC /* NewMessageView.swift */; };
+		6768B8CF2C6204B9007451DC /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768B8CE2C6204B9007451DC /* ProfileView.swift */; };
+		6768B8D12C6208AC007451DC /* SettingsOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6768B8D02C6208AC007451DC /* SettingsOptionsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		6768B8C42C60B558007451DC /* ActiveNowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveNowView.swift; sourceTree = "<group>"; };
 		6768B8C62C60C45A007451DC /* InboxRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxRowView.swift; sourceTree = "<group>"; };
 		6768B8C92C610AEE007451DC /* NewMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageView.swift; sourceTree = "<group>"; };
+		6768B8CE2C6204B9007451DC /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		6768B8D02C6208AC007451DC /* SettingsOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOptionsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,7 @@
 				6768B8B92C5FC4D5007451DC /* Authentication */,
 				6768B8C02C60B459007451DC /* Inbox */,
 				6768B8C82C610ADA007451DC /* NewMessage */,
+				6768B8CB2C620493007451DC /* Profile */,
 				6768B8BA2C5FC4DB007451DC /* Root */,
 			);
 			path = Core;
@@ -173,6 +178,31 @@
 			path = NewMessage;
 			sourceTree = "<group>";
 		};
+		6768B8CB2C620493007451DC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				6768B8CC2C62049D007451DC /* View */,
+				6768B8CD2C6204A2007451DC /* ViewModel */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		6768B8CC2C62049D007451DC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6768B8CE2C6204B9007451DC /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6768B8CD2C6204A2007451DC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6768B8D02C6208AC007451DC /* SettingsOptionsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,12 +274,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				6768B8C72C60C45A007451DC /* InboxRowView.swift in Sources */,
+				6768B8CF2C6204B9007451DC /* ProfileView.swift in Sources */,
 				6768B8CA2C610AEE007451DC /* NewMessageView.swift in Sources */,
 				6768B8BD2C5FC519007451DC /* LoginView.swift in Sources */,
 				670AC0102C5FBE4C00A3C159 /* ContentView.swift in Sources */,
 				6768B8C22C60B470007451DC /* InboxView.swift in Sources */,
 				6768B8C52C60B558007451DC /* ActiveNowView.swift in Sources */,
 				670AC00E2C5FBE4C00A3C159 /* MessengerTutorialApp.swift in Sources */,
+				6768B8D12C6208AC007451DC /* SettingsOptionsViewModel.swift in Sources */,
 				6768B8BF2C60A252007451DC /* RegistrationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
