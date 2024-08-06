@@ -6,14 +6,30 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct ProfileView: View {
+    @StateObject var viewModel = ProfileViewModel()
+    
     var body: some View {
         VStack {
-            Image(systemName: "person.circle.fill")
-                .resizable()
-                .frame(width: 80, height: 80)
-                .foregroundStyle(Color(.systemGray4))
+            // Profile Image
+            // Select a photo from Photo Library
+            PhotosPicker(selection: $viewModel.selectedItem) {
+                if let profileImage = viewModel.profileImage {
+                    profileImage
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 80, height: 80)
+                        .clipShape(Circle())
+                } else {
+                    // If there's no image selected
+                    Image(systemName: "person.circle.fill")
+                        .resizable()
+                        .frame(width: 80, height: 80)
+                        .foregroundStyle(Color(.systemGray4))
+                }
+            }
             
             Text("Bruce Wayne")
                 .font(.title2)
