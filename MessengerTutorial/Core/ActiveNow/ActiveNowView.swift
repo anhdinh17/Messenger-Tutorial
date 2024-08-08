@@ -15,12 +15,10 @@ struct ActiveNowView: View {
                     VStack {
                         // Push online circle to trailing bottom
                         // Thang nao frame nho hon 64 thi bi push
-                        // Vi ZStack co frame 63 cua Image.
+                        // Vi ZStack co frame 64 cua Image.
                         ZStack(alignment: .bottomTrailing) {
-                            Image(systemName: "person.circle")
-                                .resizable()
-                                .frame(width: 64, height: 64)
-                                .foregroundStyle(Color(.gray))
+                            CircularProfileImageView(user: User.MOCK_USER,
+                                                     size: .medium)
                             
                             ZStack {
                                 Circle()
@@ -32,6 +30,10 @@ struct ActiveNowView: View {
                                     .frame(width: 14, height: 14)
                             }
                         }
+                        
+                        Text("Bruce")
+                            .font(.subheadline)
+                            .foregroundStyle(.gray)
                     }
                 }
             }
