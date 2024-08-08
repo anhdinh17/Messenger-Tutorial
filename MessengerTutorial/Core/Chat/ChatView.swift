@@ -27,11 +27,16 @@ struct ChatView: View {
                             .foregroundStyle(.gray)
                     }
                 }
+                
+                // Messages
+                ForEach(0 ... 15, id:\.self) { message in
+                    ChatMessageCell(isFromCurrentUser: Bool.random())
+                }
             }
             .border(.blue)
             
             // Tam thoi ko xai Spacer thi van thay ScrollView
-            // keo dai toi cham ZStack
+            // keo dai toi ZStack
             //Spacer()
             
             ZStack(alignment: .trailing) {
