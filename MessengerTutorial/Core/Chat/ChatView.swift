@@ -1,0 +1,66 @@
+//
+//  ChatView.swift
+//  MessengerTutorial
+//
+//  Created by Anh Dinh on 8/8/24.
+//
+
+import SwiftUI
+
+struct ChatView: View {
+    @State private var messageText = ""
+    
+    var body: some View {
+        VStack {
+            ScrollView {
+                VStack {
+                    CircularProfileImageView(user: User.MOCK_USER,
+                                             size: .medium)
+                    
+                    VStack {
+                        Text("Bruce Wayne")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                        
+                        Text("Messeneger")
+                            .font(.footnote)
+                            .foregroundStyle(.gray)
+                    }
+                }
+            }
+            .border(.blue)
+            
+            // Tam thoi ko xai Spacer thi van thay ScrollView
+            // keo dai toi cham ZStack
+            //Spacer()
+            
+            ZStack(alignment: .trailing) {
+                // .vertical is to make the text in TextField
+                // extend vertically
+                TextField("Message ...", text: $messageText, axis: .vertical)
+                    .font(.subheadline)
+                    .padding(12)
+                    // This trailing padding makes the text not bleed over
+                    // Send button
+                    .padding(.trailing, 48)
+                    .background(Color(.systemGroupedBackground))
+                    .clipShape(Capsule())
+                
+                Button {
+                    
+                } label: {
+                    Text("Send")
+                        .fontWeight(.semibold)
+                }
+                .padding(.horizontal)
+            }
+            .padding()
+            .border(.green)
+        }
+        .border(.red)
+    }
+}
+
+#Preview {
+    ChatView()
+}
