@@ -20,7 +20,7 @@ class ContentViewModel: ObservableObject {
     }
     
     func setupSubscribers() {
-        AuthService().$userSession
+        AuthService.shared.$userSession
             .sink{ [weak self] userSessionFromAuthService in
                 // Using Combine to listen to userSession from AuthService
                 // and publish it to ContentView to decide which screen to go to

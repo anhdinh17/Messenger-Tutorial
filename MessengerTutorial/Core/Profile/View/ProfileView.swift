@@ -57,7 +57,7 @@ struct ProfileView: View {
                 
                 Section {
                     Button{
-                        
+                        AuthService.shared.signOut()
                     } label: {
                         Text("Log Out")
                     }
