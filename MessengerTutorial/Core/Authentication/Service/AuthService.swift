@@ -8,10 +8,21 @@
 import Foundation
 import FirebaseAuth
 
+//MARK: - AuthService has funcs that are associated with Firebase Authentication
+
 class AuthService {
+    // Keep track of wheter or not a user is logged in
+    @Published var userSession: FirebaseAuth.User?
+    
+    init() {
+        // If someone is logged in
+        self.userSession = Auth.auth().currentUser
+        print("DEBUG: User sessiong id is \(userSession?.uid)")
+    }
+    
     func login(withEmail email: String, password: String) async throws {
         print("DEBUG: Email is \(email)")
-        print("DEBUG: Email is \(password)")
+        print("DEBUG: Password is \(password)")
     }
     
     func createUser(withEmail email: String, password: String, fullname: String) async throws {
