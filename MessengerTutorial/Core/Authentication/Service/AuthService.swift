@@ -18,7 +18,17 @@ class AuthService {
     static let shared = AuthService()
     
     init() {
-        // If someone is logged in
+        // If noone is logged in, userSession will be nil
+        // and it broadcasts nil to contentViewModel
+        // so we go LoginView
+        //
+        // If it has current user, we go to InboxView
+        // and the fetch user below will go through
+        // to fetch user's info.
+        //
+        // One more thing, because we use Combine to broadcast userSession
+        // so contentViewModel will catch the change and go to either InboxView
+        // or LoginView first before fetching user's info.
         self.userSession = Auth.auth().currentUser
         
         // Fetch current user's info

@@ -11,11 +11,12 @@ import FirebaseFirestore
 import FirebaseAuth
 
 class UserService {
-    @Published var currentUser: User?
+    @Published var currentUser: User? // nil at first
     
     static let shared = UserService()
     
     /// Fetch info of current user
+    @MainActor
     func fetchCurrentUser() async throws {
         // Check if we have a loggined user
         guard let uid = Auth.auth().currentUser?.uid else { return }
@@ -24,5 +25,9 @@ class UserService {
         let user = try snapshot.data(as: User.self)
         self.currentUser = user
         print("DEBUG: Current user = \(currentUser)")
+    }
+    
+    deinit{
+        print("DEBUG: UserService deinit")
     }
 }
