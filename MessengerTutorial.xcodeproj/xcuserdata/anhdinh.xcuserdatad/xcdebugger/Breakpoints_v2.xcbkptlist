@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B3162302-2433-4717-B2AE-B32702632633"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MessengerTutorial/Core/Profile/View/ProfileView.swift"
@@ -40,7 +40,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "76E27FFB-FB29-4141-B785-6F08C3FC33DC"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MessengerTutorial/Core/Root/ViewModel/ContentViewModel.swift"
@@ -55,22 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "CF6364B2-660A-4B22-AE6F-F6D0E01237F7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MessengerTutorial/Core/Authentication/Service/AuthService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "init()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "D1A66DBD-5CBE-40AB-A4D6-376294A16C18"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -78,8 +62,8 @@
             filePath = "MessengerTutorial/Service/UserService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "fetchCurrentUser()"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +78,8 @@
             filePath = "MessengerTutorial/Service/UserService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "fetchCurrentUser()"
             landmarkType = "7">
          </BreakpointContent>
@@ -104,7 +88,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "ED41FCA5-83B7-4438-AA5D-6148C3312926"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MessengerTutorial/Core/Authentication/Service/AuthService.swift"
@@ -114,36 +98,6 @@
             endingLineNumber = "18"
             landmarkName = "AuthService"
             landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "ED41FCA5-83B7-4438-AA5D-6148C3312926 - defbb28a370e6959"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "one-time initialization function for shared"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Authentication/Service/AuthService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18">
-               </Location>
-               <Location
-                  uuid = "ED41FCA5-83B7-4438-AA5D-6148C3312926 - 9d6ecd9db931c93b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MessengerTutorial.AuthService.shared.unsafeMutableAddressor : MessengerTutorial.AuthService"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Authentication/Service/AuthService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -156,8 +110,8 @@
             filePath = "MessengerTutorial/Core/Authentication/Service/AuthService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "login(withEmail:password:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -166,14 +120,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "2C797B76-56A7-4B58-952E-E502FF938D16"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MessengerTutorial/Core/Authentication/Service/AuthService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "login(withEmail:password:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -214,81 +168,23 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "7A41F4C2-C14B-4821-A905-73354118E58D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MessengerTutorial/Core/Authentication/Service/AuthService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "69"
-            endingLineNumber = "69"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
             landmarkName = "createUser(withEmail:password:fullname:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7A41F4C2-C14B-4821-A905-73354118E58D - 3393c407411135f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(5) suspend resume partial function for MessengerTutorial.AuthService.createUser(withEmail: Swift.String, password: Swift.String, fullname: Swift.String) async throws -&gt; ()"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Authentication/Service/AuthService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69">
-               </Location>
-               <Location
-                  uuid = "7A41F4C2-C14B-4821-A905-73354118E58D - 7b020e8ab1f6375d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(7) suspend resume partial function for MessengerTutorial.AuthService.createUser(withEmail: Swift.String, password: Swift.String, fullname: Swift.String) async throws -&gt; ()"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Authentication/Service/AuthService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69">
-               </Location>
-               <Location
-                  uuid = "7A41F4C2-C14B-4821-A905-73354118E58D - cb2dea1e2e3bcf59"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for MessengerTutorial.AuthService.createUser(withEmail: Swift.String, password: Swift.String, fullname: Swift.String) async throws -&gt; ()"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Authentication/Service/AuthService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69">
-               </Location>
-               <Location
-                  uuid = "7A41F4C2-C14B-4821-A905-73354118E58D - d20376491756123"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(4) await resume partial function for MessengerTutorial.AuthService.createUser(withEmail: Swift.String, password: Swift.String, fullname: Swift.String) async throws -&gt; ()"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Authentication/Service/AuthService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "69"
-                  endingLineNumber = "69">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "B9A96F0B-F9DF-45CF-AE95-351CC0C860CA"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MessengerTutorial/Core/Authentication/Service/AuthService.swift"
@@ -304,14 +200,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4E5B8D18-1B67-4B37-9995-10FAAB51D960"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MessengerTutorial/Service/UserService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "fetchCurrentUser()"
             landmarkType = "7">
          </BreakpointContent>
@@ -320,7 +216,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FCF6B280-B3D8-474C-BC53-FF84E058D56A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MessengerTutorial/Core/Inbox/View/InboxView.swift"
@@ -330,64 +226,6 @@
             endingLineNumber = "12"
             landmarkName = "InboxView"
             landmarkType = "14">
-            <Locations>
-               <Location
-                  uuid = "FCF6B280-B3D8-474C-BC53-FF84E058D56A - 53f8f49300e733eb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "property wrapper backing initializer of MessengerTutorial.InboxView.viewModel : MessengerTutorial.InboxViewModel"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Inbox/View/InboxView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0">
-               </Location>
-               <Location
-                  uuid = "FCF6B280-B3D8-474C-BC53-FF84E058D56A - 68883704422c3e47"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MessengerTutorial.InboxView.viewModel.getter : MessengerTutorial.InboxViewModel"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Inbox/View/InboxView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0">
-               </Location>
-               <Location
-                  uuid = "FCF6B280-B3D8-474C-BC53-FF84E058D56A - cfd51f3dfe3839aa"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MessengerTutorial.InboxView.$viewModel.getter : SwiftUI.ObservedObject&lt;MessengerTutorial.InboxViewModel&gt;.Wrapper"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Inbox/View/InboxView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "12"
-                  endingLineNumber = "12">
-               </Location>
-               <Location
-                  uuid = "FCF6B280-B3D8-474C-BC53-FF84E058D56A - 187c6a7232acb054"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "default argument 0 of MessengerTutorial.InboxView.init(viewModel: @autoclosure () -&gt; MessengerTutorial.InboxViewModel) -&gt; MessengerTutorial.InboxView"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Inbox/View/InboxView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -416,10 +254,264 @@
             filePath = "MessengerTutorial/Service/UserService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "UserService"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C738F422-00F6-4D4E-93FB-27EB9116B54F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "setupSubscriber()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E92C25E3-CD95-4FDE-9414-8739FC36165C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerTutorial/Core/Authentication/Service/AuthService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "login(withEmail:password:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D534AE5-6C36-472D-A108-062F1481DC29"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerTutorial/Core/Root/View/ContentView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "ContentView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "6D534AE5-6C36-472D-A108-062F1481DC29 - ff1ee8f24e98802c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of MessengerTutorial.ContentView.viewModel : MessengerTutorial.ContentViewModel"
+                  moduleName = "MessengerTutorial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Root/View/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "6D534AE5-6C36-472D-A108-062F1481DC29 - bba634ec3b9c8874"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MessengerTutorial.ContentView.viewModel.getter : MessengerTutorial.ContentViewModel"
+                  moduleName = "MessengerTutorial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Root/View/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "6D534AE5-6C36-472D-A108-062F1481DC29 - 950556d29676ba81"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MessengerTutorial.ContentView.$viewModel.getter : SwiftUI.ObservedObject&lt;MessengerTutorial.ContentViewModel&gt;.Wrapper"
+                  moduleName = "MessengerTutorial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Root/View/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11">
+               </Location>
+               <Location
+                  uuid = "6D534AE5-6C36-472D-A108-062F1481DC29 - 8507a5481cc37cbe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 0 of MessengerTutorial.ContentView.init(viewModel: @autoclosure () -&gt; MessengerTutorial.ContentViewModel) -&gt; MessengerTutorial.ContentView"
+                  moduleName = "MessengerTutorial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Root/View/ContentView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A995D60-493B-4FCA-BA78-C226A984E8D7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerTutorial/Core/NewMessage/View/NewMessageView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "NewMessageView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "0A995D60-493B-4FCA-BA78-C226A984E8D7 - c79cfbe9925a93f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of MessengerTutorial.NewMessageView.viewModel : MessengerTutorial.NewMessageViewModel"
+                  moduleName = "MessengerTutorial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/NewMessage/View/NewMessageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "0A995D60-493B-4FCA-BA78-C226A984E8D7 - 1d94a5e07e380555"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MessengerTutorial.NewMessageView.viewModel.getter : MessengerTutorial.NewMessageViewModel"
+                  moduleName = "MessengerTutorial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/NewMessage/View/NewMessageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+               <Location
+                  uuid = "0A995D60-493B-4FCA-BA78-C226A984E8D7 - a54aaf4c05a5eba5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MessengerTutorial.NewMessageView.$viewModel.getter : SwiftUI.ObservedObject&lt;MessengerTutorial.NewMessageViewModel&gt;.Wrapper"
+                  moduleName = "MessengerTutorial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/NewMessage/View/NewMessageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13">
+               </Location>
+               <Location
+                  uuid = "0A995D60-493B-4FCA-BA78-C226A984E8D7 - 113180be7259205d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "default argument 1 of MessengerTutorial.NewMessageView.init(dismiss: SwiftUI.Environment&lt;SwiftUI.DismissAction&gt;, viewModel: @autoclosure () -&gt; MessengerTutorial.NewMessageViewModel) -&gt; MessengerTutorial.NewMessageView"
+                  moduleName = "MessengerTutorial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/NewMessage/View/NewMessageView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D5CBE4CD-D6DB-4E0D-B888-1FEC04BD4BA7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerTutorial/Core/NewMessage/ViewModel/NewMessageViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D5CBE4CD-D6DB-4E0D-B888-1FEC04BD4BA7 - ce05e26649d11f87"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () async throws -&gt; () in MessengerTutorial.NewMessageViewModel.init() -&gt; MessengerTutorial.NewMessageViewModel"
+                  moduleName = "MessengerTutorial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/NewMessage/ViewModel/NewMessageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18">
+               </Location>
+               <Location
+                  uuid = "D5CBE4CD-D6DB-4E0D-B888-1FEC04BD4BA7 - 5748f8a26ffc1d8a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) await resume partial function for closure #1 @Sendable () async throws -&gt; () in MessengerTutorial.NewMessageViewModel.init() -&gt; MessengerTutorial.NewMessageViewModel"
+                  moduleName = "MessengerTutorial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/NewMessage/ViewModel/NewMessageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18">
+               </Location>
+               <Location
+                  uuid = "D5CBE4CD-D6DB-4E0D-B888-1FEC04BD4BA7 - d56bcc84c30cb1a0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in MessengerTutorial.NewMessageViewModel.init() -&gt; MessengerTutorial.NewMessageViewModel"
+                  moduleName = "MessengerTutorial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/NewMessage/ViewModel/NewMessageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18">
+               </Location>
+               <Location
+                  uuid = "D5CBE4CD-D6DB-4E0D-B888-1FEC04BD4BA7 - d44d9028b082fa3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in MessengerTutorial.NewMessageViewModel.init() -&gt; MessengerTutorial.NewMessageViewModel"
+                  moduleName = "MessengerTutorial"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/NewMessage/ViewModel/NewMessageViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

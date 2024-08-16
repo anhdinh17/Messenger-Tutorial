@@ -31,12 +31,7 @@ class AuthService {
         // or LoginView first before fetching user's info.
         self.userSession = Auth.auth().currentUser
         
-        // Fetch current user's info
-        // If there's no user loggined,
-        // code inside fetchCurrentUser() will stop.
-        Task {
-            try await UserService.shared.fetchCurrentUser()
-        }
+        loadCurrentUserData()
         
         print("DEBUG: User session id is \(userSession?.uid)")
     }
@@ -51,6 +46,9 @@ class AuthService {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             // populate the change for routing logic
             self.userSession = result.user
+            
+            // Fetch data of user after logging in
+            loadCurrentUserData()
         } catch {
             print("DEBUG: Fail to sign in with error: \(error.localizedDescription)")
         }
@@ -67,6 +65,9 @@ class AuthService {
             
             // Upload user's info to Firestore
             try await self.uploadUserData(email: email, fullname: fullname, id: result.user.uid)
+            
+            // Fetch user's data
+            loadCurrentUserData()
         } catch {
             print("DEBUG: Error of sign up - \(error.localizedDescription)")
         }
@@ -80,6 +81,7 @@ class AuthService {
              */
             try Auth.auth().signOut() //sign out from back end
             self.userSession = nil // update routing logic
+            UserService.shared.currentUser = nil // make sure to clear current user after sign out
         } catch {
             print("DEBUG: Fail to sign out with error: \(error.localizedDescription)")
         }
@@ -91,5 +93,14 @@ class AuthService {
         guard let encodedUser = try? Firestore.Encoder().encode(user) else { return }
         try await Firestore.firestore().collection("users").document(id).setData(encodedUser)
         print("DEBUG: User's info: uid - \(user.uid) id - \(user.id)")
+    }
+    
+    private func loadCurrentUserData() {
+        // Fetch current user's info
+        // If there's no user loggined,
+        // code inside fetchCurrentUser() will stop.
+        Task {
+            try await UserService.shared.fetchCurrentUser()
+        }
     }
 }
