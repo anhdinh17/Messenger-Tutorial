@@ -10,6 +10,8 @@ import SwiftUI
 struct InboxView: View {
     @State private var showNewMessageView = false
     @StateObject var viewModel = InboxViewModel()
+    @State private var selectedUser: User? // nil at first
+    @State private var showChat = false
     
     var user: User? {
         return viewModel.currentUser
@@ -31,13 +33,33 @@ struct InboxView: View {
                 .listStyle(.plain)
                 .frame(height: UIScreen.main.bounds.height - 120)
             }
+            .onAppear{
+                print("DEBUG: SHOWCHAT: \(showChat)")
+                print("DEBUG: ShowMessageView: \(showNewMessageView)")
+            }
+            //MARK: - Change value of selectedUser
+            // if selectedUser has value and it's not nil, showChat = true
+            .onChange(of: selectedUser, { oldValue, newValue in
+                showChat = newValue != nil
+            })
+            
             .navigationDestination(for: User.self, destination: { user in
                 ProfileView(user: user)
             })
+            
+            // Use another way of navigation to navigate to ChatView
+            // depends on showChat
+            .navigationDestination(isPresented: $showChat, destination: {
+                // if selectedUser not nil
+                if let user = selectedUser {
+                    ChatView(user: user)
+                }
+            })
+            
             // Show New Message View
             // This is like modal present, not a Navigation push
             .fullScreenCover(isPresented: $showNewMessageView, content: {
-                NewMessageView()
+                NewMessageView(selectedUser: $selectedUser)
             })
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {

@@ -19,6 +19,7 @@ class NewMessageViewModel: ObservableObject {
         }
     }
     
+    /// Fetch all users from Firestore
     func fetchAllUsers() async throws {
         guard let currentUid = Auth.auth().currentUser?.uid else { return }
         let users = try await UserService.fetchAllUsers()
