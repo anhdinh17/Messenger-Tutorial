@@ -28,7 +28,7 @@ struct NewMessageView: View {
                     .padding()
                 
                 //MARK: - Fetch users
-                ForEach( viewModel.users) { user in
+                ForEach(viewModel.users) { user in
                     VStack {
                         HStack {
                             CircularProfileImageView(user: user,

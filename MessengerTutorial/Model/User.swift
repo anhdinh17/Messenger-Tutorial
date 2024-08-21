@@ -11,6 +11,7 @@ import FirebaseFirestore
 /** ---NOTE---
  - Explain @DocumentID:
  - This is an Property Wrapper for FirebaseFirestore
+ - It has to be optional
  - Everytime we fetch/read data from Firestore, it will go to document path and read the info in it and store it into this @DocumentID property automatically
     - In this case, we have user's ID given by backend inside the "document" path, so that ID will be stored in "uid" property
  
