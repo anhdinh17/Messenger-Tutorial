@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct ChatMessageCell: View {
-    // Foundation to determine if the text is from current user
-    // or from someone else
-    let isFromCurrentUser: Bool
+    // Take in a message
+    let message: Message
+    
+    private var isFromCurrentUser: Bool {
+        return message.isFromCurrentUser
+    }
     
     var body: some View {
         HStack {
@@ -18,7 +21,7 @@ struct ChatMessageCell: View {
             if isFromCurrentUser {
                 Spacer()
                 
-                Text("This is text from current user of the app, it's gonna be a long text, let's see what happens.")
+                Text(message.messageText)
                     .font(.subheadline)
                     .padding(12)
                     .background(Color(.systemBlue))
@@ -34,7 +37,7 @@ struct ChatMessageCell: View {
                     CircularProfileImageView(user: User.MOCK_USER,
                                              size: .xxSmall)
                     
-                    Text("This is message from someone else")
+                    Text(message.messageText)
                         .font(.subheadline)
                         .padding(12)
                         .background(Color(.systemGray5))
@@ -50,6 +53,6 @@ struct ChatMessageCell: View {
     }
 }
 
-#Preview {
-    ChatMessageCell(isFromCurrentUser: true)
-}
+//#Preview {
+//    ChatMessageCell(isFromCurrentUser: true)
+//}
