@@ -52,7 +52,7 @@ struct MessageService {
         }
         
         //MARK: - Set data for both current user path and other user path
-        // set data
+        // Inside the document ID, set data for the message
         currentUserRef.setData(messageData)
         
         // go to the document with the same id as currentUserRef and set data
@@ -79,7 +79,7 @@ struct MessageService {
         // We use addSnapshotListener so that
         // every time a document(text) is added to Firestore,
         // Firestore will send notification and information
-        // to the app about new document added right away.
+        // to the app about new added document right away.
         //
         // This is how we get real time update for the chat.
         query.addSnapshotListener { snapshot, _ in
@@ -95,12 +95,12 @@ struct MessageService {
             //
             // When we first get to the ChatView with other user
             // it has all messages in DB.
-            // When we added new message, it only has new message
+            // When we add new message, it only has new message
             var messages = changes.compactMap({ try? $0.document.data(as: Message.self)})
             print("DEBUG: messages = \(messages)------------------------")
             
             // CQ gì vậy?
-            // This is for if the message is not from us
+            // This is message which is not from us
             for (index, message) in messages.enumerated() where message.fromId != currentId {
                 messages[index].user = chatPartner
             }

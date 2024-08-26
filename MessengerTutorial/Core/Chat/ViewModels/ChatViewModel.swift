@@ -27,6 +27,8 @@ class ChatViewModel: ObservableObject {
     func observeMessages() {
         MessageService.observeMessages(chatPartner: user) { messages in
             // append added message
+            // When first coming to ChatView, this will fetch all messages from DB
+            // When adding new messages, it will update UI in ChatView to show new texts.
             self.messages.append(contentsOf: messages)
         }
     }

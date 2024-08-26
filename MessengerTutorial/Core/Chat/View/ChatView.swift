@@ -22,6 +22,7 @@ struct ChatView: View {
     var body: some View {
         VStack {
             ScrollView {
+                // Other User
                 VStack {
                     CircularProfileImageView(user: user,
                                              size: .medium)
@@ -48,6 +49,7 @@ struct ChatView: View {
             // keo dai toi ZStack
             //Spacer()
             
+            // Text TextField
             ZStack(alignment: .trailing) {
                 // .vertical is to make the text in TextField
                 // extend vertically
