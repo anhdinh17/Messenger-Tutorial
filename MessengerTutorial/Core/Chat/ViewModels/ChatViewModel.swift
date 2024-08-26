@@ -12,20 +12,22 @@ class ChatViewModel: ObservableObject {
     @Published var messageText = ""
     @Published var messages = [Message]()
     
-    // Take in a User
-    let user: User
+    let service: ChatService
     
+    // Take in a User of someone else
     init(user: User) {
-        self.user = user
+        // Pay attetntion to this kind of init
+        // It's like Dependency Injection
+        self.service = ChatService(chatPartner: user)
         observeMessages()
     }
     
     func sendMessage() {
-        MessageService.sendMessage(messageText, toUser: user)
+        service.sendMessage(messageText)
     }
     
     func observeMessages() {
-        MessageService.observeMessages(chatPartner: user) { messages in
+        service.observeMessages() { messages in
             // append added message
             // When first coming to ChatView, this will fetch all messages from DB
             // When adding new messages, it will update UI in ChatView to show new texts.

@@ -78,6 +78,14 @@ struct InboxView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         showNewMessageView.toggle()
+                        
+                        //MARK: - Fix bug
+                        // The bug is if we go to NewMessageView and select a user, it works fine.
+                        // But if we go to NewMessageView again and select the same user, it not gonna navigate.
+                        // Because the second time we select user, the object doesn't change => .onchange not triggered.
+                        // So we have to make selectedUser = nil every time we hit button so that we can have
+                        // value change
+                        selectedUser = nil
                     }label: {
                         Image(systemName: "square.and.pencil.circle.fill")
                             .resizable()
