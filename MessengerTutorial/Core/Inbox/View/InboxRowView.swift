@@ -8,17 +8,20 @@
 import SwiftUI
 
 struct InboxRowView: View {
+    // Take in a Message Object
+    let message: Message
+    
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
-            CircularProfileImageView(user: User.MOCK_USER,
+            CircularProfileImageView(user: message.user,
                                      size: .medium)
             
             VStack(alignment: .leading) {
-                Text("Bruce Wayne")
+                Text(message.user?.fullname ?? "")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                 
-                Text("A message that spans more than 1 line for now")
+                Text(message.messageText)
                     .font(.subheadline)
                     .foregroundStyle(.gray)
                     .lineLimit(2)
@@ -40,6 +43,6 @@ struct InboxRowView: View {
     }
 }
 
-#Preview {
-    InboxRowView()
-}
+//#Preview {
+//    InboxRowView()
+//}

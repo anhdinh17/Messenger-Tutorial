@@ -26,7 +26,7 @@ struct Message: Identifiable, Hashable, Codable {
     
     var chatPartnerId: String {
         // If fromId = current user's id,
-        // => return toId, else return fromId
+        // return id of the one we are to talking to.
         return fromId == Auth.auth().currentUser?.uid ? toId : fromId
     }
     

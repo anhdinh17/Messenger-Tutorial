@@ -40,4 +40,14 @@ class UserService {
     deinit{
         print("DEBUG: UserService deinit")
     }
+    
+    /// Fetch a User
+    /// Go to uid and fetch the user at that ID
+    static func fetchUser(withId uid: String, completion: @escaping (User) -> Void) {
+        FirestoreConstants.UsersCollection.document(uid).getDocument { snapshot, _ in
+            // get a User object to "user"
+            guard let user = try? snapshot?.data(as: User.self) else { return }
+            completion(user)
+        }
+    }
 }

@@ -25,14 +25,35 @@ struct ChatService {
         // id of other user
         let chatPartnerId = chatPartner.id
         
+        //MARK: - Every time we hit send button
         // This is a path to a document, inside this document is a text between us and other people
-        // .document() creates a path to a new document
-        // AND it automatically creates 1 ID.
+        //
+        // .document() is IMPORTANT because every time we hit send button, it creates a NEW path
+        // to a document that has the text AND it automatically creates 1 ID.
+        //
+        // This .document() makes the difference between all messages and recent messages.
+        // Because for recent messages, we go to the same path every time we hit send button to
+        // create a text in DB.
         let currentUserRef =
         FirestoreConstants.MessagesCollection.document(currentId).collection(chatPartnerId).document()
         
         let chatPartnerRef =
         FirestoreConstants.MessagesCollection.document(chatPartnerId).collection(currentId)
+        
+        //MARK: - Recent messages
+        // Tạo thêm 1 "recent-messages" collection
+        // trong collection list chat của mỗi user.
+        // Trong "recent-message" collection, tạo document của id của
+        // người mình chat.
+        let recentCurrentUserRef = FirestoreConstants
+            .MessagesCollection
+            .document(currentId)
+            .collection("recent-messages").document(chatPartnerId)
+        let recentPartnerRef = FirestoreConstants
+            .MessagesCollection
+            .document(chatPartnerId)
+            .collection("recent-messages").document(currentId)
+        /// ---------------------
         
         // Get id that .document() creates above
         let messageId = currentUserRef.documentID
@@ -52,9 +73,12 @@ struct ChatService {
         //MARK: - Set data for both current user path and other user path
         // Inside the document ID, set data for the message
         currentUserRef.setData(messageData)
-        
         // go to the document with the same id as currentUserRef and set data
         chatPartnerRef.document(messageId).setData(messageData)
+        
+        //MARK: - Set data for recent messages
+        recentCurrentUserRef.setData(messageData)
+        recentPartnerRef.setData(messageData)
     }
     
     /// For simple understanding, don't try to remember all syntax
@@ -67,7 +91,7 @@ struct ChatService {
         guard let currentId = Auth.auth().currentUser?.uid else { return }
         let chatPartnerId = chatPartner.id
         
-        // Go to this path and sort the text by order of timestamp
+        // Go to this path and sort the documents inside it by order of timestamp
         let query = FirestoreConstants.MessagesCollection
             .document(currentId)
             .collection(chatPartnerId)

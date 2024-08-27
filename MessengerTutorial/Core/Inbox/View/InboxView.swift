@@ -22,12 +22,14 @@ struct InboxView: View {
             ScrollView {
                 ActiveNowView()
                 
+                // List of users that we are talking to
+                // Display recent message for each user
                 // As of Aug 05, 2024
                 // List acts strangly in ScrollView
                 // Gotta have .listStyle and .frame so it can display
                 List {
-                    ForEach(0 ... 10, id:\.self) { _ in
-                        InboxRowView()
+                    ForEach(viewModel.recentMessages) { message in
+                        InboxRowView(message: message)
                     }
                 }
                 .listStyle(.plain)
