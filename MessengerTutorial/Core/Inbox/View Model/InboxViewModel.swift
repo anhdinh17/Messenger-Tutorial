@@ -30,6 +30,11 @@ class InboxViewModel: ObservableObject {
             }
             .store(in: &cancellables)
         
+        // Listen to $documentChanges
+        // In init, setup subscriber, at this point $documentChanges is an empty array
+        // -> changes has 0 values (break point) -> UI has nothing
+        // we call observeRecentMessages() -> $documentChanges has data
+        // -> publish data -> this junk runs -> recentMessages array updates.
         service.$documentChanges.sink { [weak self] changes in
             self?.loadInitialMessages(fromChanges: changes)
         }.store(in: &cancellables)

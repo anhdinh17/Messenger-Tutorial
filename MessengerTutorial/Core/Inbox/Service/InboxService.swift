@@ -10,6 +10,7 @@ import Firebase
 import FirebaseAuth
 
 class InboxService {
+    // DocumentChange is from Firestore
     @Published var documentChanges = [DocumentChange]()
     
     // Observe the change of recent-messages collection
@@ -38,7 +39,7 @@ class InboxService {
             print("DEBUG: Changes from observeRecentMessage: \(changes)")
             
             // Publish changes
-            // InboxVM listens to this change
+            // InboxVM.recentMessages listens to this change
             self.documentChanges = changes
         }
     }

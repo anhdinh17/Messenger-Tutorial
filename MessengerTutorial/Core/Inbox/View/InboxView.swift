@@ -19,22 +19,34 @@ struct InboxView: View {
     
     var body: some View {
         NavigationStack {
-            ScrollView {
+            // List of users that we are talking to
+            // Display recent message for each user
+            // As of Aug 05, 2024
+            // List acts strangly in ScrollView
+            // Gotta have .listStyle and .frame so it can display
+            List {
                 ActiveNowView()
+                    .listRowSeparator(.hidden)
+                    .listRowInsets(EdgeInsets())
+                    .padding(.vertical)
+                    .padding(.horizontal,4)
                 
-                // List of users that we are talking to
-                // Display recent message for each user
-                // As of Aug 05, 2024
-                // List acts strangly in ScrollView
-                // Gotta have .listStyle and .frame so it can display
-                List {
-                    ForEach(viewModel.recentMessages) { message in
+                ForEach(viewModel.recentMessages) { message in
+                    // Use this workaround way to hide the
+                    // default indicator right chevron of List
+                    ZStack {
+                        NavigationLink(value: message) {
+                            EmptyView()
+                                .border(.pink)
+                        }
+                        .opacity(0.0)
+                        .border(.blue)
+                        
                         InboxRowView(message: message)
                     }
                 }
-                .listStyle(.plain)
-                .frame(height: UIScreen.main.bounds.height - 120)
             }
+            .listStyle(.plain)
             .onAppear{
                 print("DEBUG: SHOWCHAT: \(showChat)")
                 print("DEBUG: ShowMessageView: \(showNewMessageView)")
@@ -45,10 +57,19 @@ struct InboxView: View {
                 showChat = newValue != nil
             })
             
+            //MARK: - Navigate to ChatView by clicking on 1 chat
+            .navigationDestination(for: Message.self, destination: { message in
+                if let user = message.user {
+                    ChatView(user: user)
+                }
+            })
+            
+            //MARK: - Navigate to ProfileView
             .navigationDestination(for: User.self, destination: { user in
                 ProfileView(user: user)
             })
             
+            //MARK: - Navigate to ChatView
             // Use another way of navigation to navigate to ChatView
             // depends on showChat
             .navigationDestination(isPresented: $showChat, destination: {

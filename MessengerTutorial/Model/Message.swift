@@ -33,4 +33,10 @@ struct Message: Identifiable, Hashable, Codable {
     var isFromCurrentUser: Bool {
         return fromId == Auth.auth().currentUser?.uid
     }
+    
+    var timestampString: String {
+        // Convert timestamp from Firestore to Date
+        let timeToDate = timestamp.dateValue()
+        return timeToDate.timestampString()
+    }
 }
