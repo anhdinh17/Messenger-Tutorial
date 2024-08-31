@@ -30,8 +30,14 @@ class UserService {
     }
     
     /// Fetch all users in "users" collection
-    static func fetchAllUsers() async throws -> [User] {
-        let snapshot = try await Firestore.firestore().collection("users").getDocuments() // Plural
+    ///
+    /// specify "limit" if we want to set litmit for number of users.
+    static func fetchAllUsers(limit: Int? = nil) async throws -> [User] {
+        let query = FirestoreConstants.UsersCollection
+        if let limit {
+            query.limit(to: limit)
+        }
+        let snapshot = try await query.getDocuments() // Plural
         // cast each element into User object.
         let users = snapshot.documents.compactMap({ try? $0.data(as: User.self)})
         return users

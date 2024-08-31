@@ -29,6 +29,13 @@ struct User: Identifiable, Codable, Hashable {
     var id: String {
         return uid ?? UUID().uuidString
     }
+    
+    // Get the last name from fullname
+    var lastName: String {
+        let formatter = PersonNameComponentsFormatter()
+        let components = formatter.personNameComponents(from: fullname)
+        return components?.givenName ?? fullname
+    }
 }
 
 extension User {

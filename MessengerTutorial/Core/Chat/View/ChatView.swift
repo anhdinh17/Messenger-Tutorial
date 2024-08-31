@@ -76,6 +76,8 @@ struct ChatView: View {
             .border(.green)
         }
         .border(.red)
+        .navigationTitle(user.fullname)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 

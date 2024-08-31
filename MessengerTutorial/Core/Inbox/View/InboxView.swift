@@ -64,9 +64,15 @@ struct InboxView: View {
                 }
             })
             
-            //MARK: - Navigate to ProfileView
-            .navigationDestination(for: User.self, destination: { user in
-                ProfileView(user: user)
+            //MARK: - Navigate to ProfileView or ChatView
+            // Depending on the take in enum
+            .navigationDestination(for: Route.self, destination: { route in
+                switch route {
+                case .profile(let user):
+                    ProfileView(user: user)
+                case .chatView(let user):
+                    ChatView(user: user)
+                }
             })
             
             //MARK: - Navigate to ChatView
@@ -87,9 +93,12 @@ struct InboxView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     HStack {
-                        NavigationLink(value: user) {
-                            CircularProfileImageView(user: user,
-                                                     size: .xSmall)
+                        // NavLink taking in a Route enum
+                        if let user = user {
+                            NavigationLink(value: Route.profile(user)) {
+                                CircularProfileImageView(user: user,
+                                                         size: .xSmall)
+                            }
                         }
                         
                         Text("Chats")
@@ -117,6 +126,8 @@ struct InboxView: View {
                     }
                 }
             }
+            .navigationTitle("Chats")
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
