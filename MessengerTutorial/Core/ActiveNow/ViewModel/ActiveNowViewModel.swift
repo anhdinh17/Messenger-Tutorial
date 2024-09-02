@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Firebase
+import FirebaseAuth
 
 class ActiveNowViewModel: ObservableObject {
     @Published var users: [User] = []
@@ -20,6 +20,10 @@ class ActiveNowViewModel: ObservableObject {
     /// Fetch users for ActiveNow
     @MainActor
     func fetchUsers() async throws {
-        self.users = try await UserService.fetchAllUsers(limit: 10)
+        guard let currentUid = Auth.auth().currentUser?.uid else { return }
+        let users = try await UserService.fetchAllUsers(limit: 10)
+        // Remove current user from the fetch
+        // Because we want to fetch all users but ourselves
+        self.users = users.filter({ $0.id != currentUid})
     }
 }
