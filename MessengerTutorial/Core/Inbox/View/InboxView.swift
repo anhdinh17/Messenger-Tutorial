@@ -17,6 +17,10 @@ struct InboxView: View {
         return viewModel.currentUser
     }
     
+    init() {
+        print("DEBUG: InboxView Init")
+    }
+    
     var body: some View {
         NavigationStack {
             // List of users that we are talking to

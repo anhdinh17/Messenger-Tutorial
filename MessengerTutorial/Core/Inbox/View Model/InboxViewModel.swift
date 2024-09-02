@@ -14,8 +14,10 @@ class InboxViewModel: ObservableObject {
     @Published var recentMessages = [Message]()
     private var cancellables = Set<AnyCancellable>()
     let service = InboxService()
+    private var didInitialLoad: Bool = false
     
     init() {
+        print("InboxViewModel init")
         setupSubscriber()
         
         // fetch recent messages from DB
@@ -61,19 +63,57 @@ class InboxViewModel: ObservableObject {
         // We need to loop through the array and fetch user from chatPartnerId of each Message element
         // so that the property "user" of each element can have value(not nil anymore) which contains full name
         // of the users we are talking to
-        for i in 0 ..< messages.count {
-            // message is a Message object
-            let message = messages[i]
-            
-            // Fetch user we are talking to
-            UserService.fetchUser(withId: message.chatPartnerId) { [weak self] user in
-                messages[i].user = user
-                print("DEBUG: message[i].user - \(messages[i].user)")
-                // Publish changes to InboxView
-                // BUG HERE: add thêm làm tăng size array
-                // We need to add new message to existing user
-                self?.recentMessages.append(messages[i])
+        if didInitialLoad == false {
+            for i in 0 ..< messages.count {
+                // message is a Message object
+                let message = messages[i]
+                
+                // Fetch user we are talking to
+                UserService.fetchUser(withId: message.chatPartnerId) { [weak self] user in
+                    messages[i].user = user
+                    print("DEBUG: message[i].user - \(messages[i].user)")
+                    // Publish changes to InboxView
+                    // BUG HERE: add thêm làm tăng size array
+                    // We need to add new message to existing user
+                    self?.recentMessages.append(messages[i])
+                    
+                    // Fix bug
+                    // After all users are fetched, make didInitialLoad = true
+                    // so when we add new message, it comes to else block.
+                    if i == messages.count - 1 {
+                        self?.didInitialLoad = true
+                    }
+                }
+            }
+        }
+        else {
+            for i in 0 ..< messages.count {
+                // message is a Message object
+                let message = messages[i]
+                
+                // Fetch user we are talking to
+                UserService.fetchUser(withId: message.chatPartnerId) { [weak self] user in
+                    messages[i].user = user
+                    print("DEBUG: message[i].user - \(messages[i].user)")
+                    self?.updateRecentMessage(messages[i])
+                }
+            }
+        }
+    }
+    
+    /// Update the recent message of the user that has same toId as
+    /// take-in Message
+    func updateRecentMessage(_ message: Message) {
+        for i in 0 ..< self.recentMessages.count {
+            if recentMessages[i].toId == message.toId {
+                self.recentMessages[i] = message
             }
         }
     }
 }
+
+//MARK: - Fix bug
+//When add a new message to a User, InboxView adds a new recent message for the same user.
+//Check if recentMessages already has that user.
+// If it does, get the new recent message.
+// If it does not, add a new element to recentMessages array.
