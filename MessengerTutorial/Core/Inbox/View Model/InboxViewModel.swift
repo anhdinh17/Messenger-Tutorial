@@ -11,7 +11,7 @@ import Firebase
 
 class InboxViewModel: ObservableObject {
     @Published var currentUser: User? // nil at first
-    @Published var recentMessages = [Message]()
+    @Published var recentMessages: [Message] = []
     private var cancellables = Set<AnyCancellable>()
     let service = InboxService()
     private var didInitialLoad: Bool = false
@@ -78,7 +78,7 @@ class InboxViewModel: ObservableObject {
                     self?.recentMessages.append(messages[i])
                     
                     // Fix bug
-                    // After all users are fetched, make didInitialLoad = true
+                    // After all users are fetched when first coming to InboxView, make didInitialLoad = true
                     // so when we add new message, it comes to else block.
                     if i == messages.count - 1 {
                         self?.didInitialLoad = true
@@ -101,19 +101,38 @@ class InboxViewModel: ObservableObject {
         }
     }
     
-    /// Update the recent message of the user that has same toId as
+    /// Update the recent message of the user that has same toID as
     /// take-in Message
-    func updateRecentMessage(_ message: Message) {
-        for i in 0 ..< self.recentMessages.count {
-            if recentMessages[i].toId == message.toId {
-                self.recentMessages[i] = message
+    /// Or add new Message Object to array
+    private func updateRecentMessage(_ message: Message) {
+        // check if there's already a ToID in existing array
+        // If so, update recent message of exisiting user
+        if isNewConversation(message) {
+            self.recentMessages.append(message)
+        } else {
+            for i in 0 ..< self.recentMessages.count {
+                if recentMessages[i].toId == message.toId {
+                    self.recentMessages[i] = message
+                }
             }
         }
     }
+    
+    private func isNewConversation(_ message: Message) -> Bool {
+        var existingToID: [String] = []
+        for message in recentMessages {
+            existingToID.append(message.toId)
+        }
+        return !existingToID.contains(message.toId)
+    }
 }
 
-//MARK: - Fix bug
-//When add a new message to a User, InboxView adds a new recent message for the same user.
-//Check if recentMessages already has that user.
-// If it does, get the new recent message.
-// If it does not, add a new element to recentMessages array.
+// MARK: - Fix bug When adding a new message, we add new element to recentMessages but not replacing the existing one
+// -> array has new element -> we have more rows in InboxView
+// -> check if array already has Message object of the user we are talking to
+// -> replace message @ that Message object
+// If array doesn't have Message object from a user -> add new element to array.
+// FIX: add var didInitialLoad and updateRecentMessage
+
+//MARK: - Appstuff's way to fix bug
+

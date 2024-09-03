@@ -498,36 +498,6 @@
             endingLineNumber = "38"
             landmarkName = "body"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "D5A158BF-3260-4D06-B76D-A841C180B254 - f341e71ad1c63fef"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.ForEach&lt;Swift.Array&lt;MessengerTutorial.Message&gt;, Swift.String, SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.border&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, width: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, MessengerTutorial.InboxRowView)&gt;&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0 in MessengerTutorial.InboxView.body.getter : some"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Inbox/View/InboxView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38">
-               </Location>
-               <Location
-                  uuid = "D5A158BF-3260-4D06-B76D-A841C180B254 - d114f255886db572"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (MessengerTutorial.Message) -&gt; SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.border&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, width: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, MessengerTutorial.InboxRowView)&gt;&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.padding(SwiftUI.Edge.Set, Swift.Optional&lt;CoreGraphics.CGFloat&gt;) -&gt; some&gt;&gt;.0, SwiftUI.ForEach&lt;Swift.Array&lt;MessengerTutorial.Message&gt;, Swift.String, SwiftUI.ZStack&lt;SwiftUI.TupleView&lt;(&lt;&lt;opaque return type of SwiftUI.View.border&lt;&#x3c4;_0_0 where &#x3c4;_1_0: SwiftUI.ShapeStyle&gt;(_: &#x3c4;_1_0, width: CoreGraphics.CGFloat) -&gt; some&gt;&gt;.0, MessengerTutorial.InboxRowView)&gt;&gt;&gt;)&gt; in closure #1 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.navigationBarTitleDisplayMode(SwiftUI.NavigationBarItem.TitleDisplayMode) -&gt; some&gt;&gt;.0 in MessengerTutorial.InboxView.body.getter : some"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Inbox/View/InboxView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -613,52 +583,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DAB7C79A-1E85-43B2-9CDE-3141E799694B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "setupSubscriber()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "DAB7C79A-1E85-43B2-9CDE-3141E799694B - 6a9fd8e6ea8b942a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MessengerTutorial.InboxViewModel.setupSubscriber() -&gt; ()"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Inbox/View%20Model/InboxViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40">
-               </Location>
-               <Location
-                  uuid = "DAB7C79A-1E85-43B2-9CDE-3141E799694B - 8a1f1590396d891d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Array&lt;__C.FIRDocumentChange&gt;) -&gt; () in MessengerTutorial.InboxViewModel.setupSubscriber() -&gt; ()"
-                  moduleName = "MessengerTutorial"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anhdinh/Desktop/Swift%20UI/App%20Stuff/Messenger/MessengerTutorial/MessengerTutorial/Core/Inbox/View%20Model/InboxViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "19B2411D-501E-4E02-BB66-1CAB6E57677F"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -675,15 +599,63 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "367C15C0-212F-4087-9D11-8F76111D611E"
+            uuid = "2D52D654-41BF-41C4-9C5E-87392BBC2630"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "loadInitialMessages(fromChanges:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "33FBBE92-1DFE-4EE0-92C8-09084998AF25"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "loadInitialMessages(fromChanges:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C849924-9792-49AC-AFCD-21136F64CDAE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "loadInitialMessages(fromChanges:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5358C394-B759-41CB-90EA-2C8D9BB1E6F6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "updateRecentMessage(_:)"
             landmarkType = "7">
          </BreakpointContent>
