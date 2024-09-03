@@ -254,8 +254,8 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
             landmarkName = "setupSubscriber()"
             landmarkType = "7">
          </BreakpointContent>
@@ -430,8 +430,8 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -446,8 +446,8 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -478,8 +478,8 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "setupSubscriber()"
             landmarkType = "7">
          </BreakpointContent>
@@ -510,9 +510,9 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "loadInitialMessages(fromChanges:)"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "loadInitialMessagesWithMyWayToFixBug(fromChanges:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -526,9 +526,9 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "loadInitialMessages(fromChanges:)"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "loadInitialMessagesWithMyWayToFixBug(fromChanges:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -542,9 +542,9 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
-            landmarkName = "loadInitialMessages(fromChanges:)"
+            startingLineNumber = "120"
+            endingLineNumber = "120"
+            landmarkName = "loadInitialMessagesWithMyWayToFixBug(fromChanges:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -558,9 +558,9 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
-            landmarkName = "loadInitialMessages(fromChanges:)"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "loadInitialMessagesWithMyWayToFixBug(fromChanges:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -574,9 +574,9 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
-            landmarkName = "loadInitialMessages(fromChanges:)"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
+            landmarkName = "loadInitialMessagesWithMyWayToFixBug(fromChanges:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -590,9 +590,9 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "loadInitialMessages(fromChanges:)"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "loadInitialMessagesWithMyWayToFixBug(fromChanges:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -606,9 +606,9 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "loadInitialMessages(fromChanges:)"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "loadInitialMessagesWithMyWayToFixBug(fromChanges:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -622,9 +622,9 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "loadInitialMessages(fromChanges:)"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "loadInitialMessagesWithMyWayToFixBug(fromChanges:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -638,9 +638,9 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "loadInitialMessages(fromChanges:)"
+            startingLineNumber = "129"
+            endingLineNumber = "129"
+            landmarkName = "loadInitialMessagesWithMyWayToFixBug(fromChanges:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -654,9 +654,25 @@
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "updateRecentMessage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E66787FE-29BF-4949-880C-7844F8F2C85C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "203"
+            endingLineNumber = "203"
+            landmarkName = "updateMessagesFromExistingConversation(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

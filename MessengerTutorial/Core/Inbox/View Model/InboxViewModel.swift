@@ -16,6 +16,9 @@ class InboxViewModel: ObservableObject {
     let service = InboxService()
     private var didInitialLoad: Bool = false
     
+    // AppStuff fix recent message bug
+    private var didCompleteInitialLoad = false
+    
     init() {
         print("InboxViewModel init")
         setupSubscriber()
@@ -38,11 +41,38 @@ class InboxViewModel: ObservableObject {
         // we call observeRecentMessages() -> $documentChanges has data
         // -> publish data -> this junk runs -> recentMessages array updates.
         service.$documentChanges.sink { [weak self] changes in
-            self?.loadInitialMessages(fromChanges: changes)
+            if ((self?.didCompleteInitialLoad) != nil) {
+                self?.updateMessages(changes)
+            } else {
+                self?.loadInitialMessages(fromChanges: changes)
+            }
+
+            //--------My way to fix recent message bug-------//
+            //self?.loadInitialMessagesWithMyWayToFixBug
         }.store(in: &cancellables)
     }
     
     private func loadInitialMessages(fromChanges changes: [DocumentChange]) {
+        var messages = changes.compactMap({
+            try? $0.document.data(as: Message.self)
+        })
+        for i in 0 ..< messages.count {
+            // message is a Message object
+            let message = messages[i]
+            
+            // Fetch user we are talking to
+            UserService.fetchUser(withId: message.chatPartnerId) { [weak self] user in
+                messages[i].user = user
+                print("DEBUG: message[i].user - \(messages[i].user)")
+                self?.recentMessages.append(messages[i])
+                if i == messages.count - 1 {
+                    self?.didCompleteInitialLoad = true
+                }
+            }
+        }
+    }
+    
+    private func loadInitialMessagesWithMyWayToFixBug(fromChanges changes: [DocumentChange]) {
         // Return an array of Message
         // When we come to InboxView, it will be an array of multi Messages objects
         // because we have multiple users that we are talking to and each user has a recent message with us.
@@ -135,4 +165,42 @@ class InboxViewModel: ObservableObject {
 // FIX: add var didInitialLoad and updateRecentMessage
 
 //MARK: - Appstuff's way to fix bug
+extension InboxViewModel {
+    private func updateMessages(_ changes: [DocumentChange]) {
+        for change in changes {
+            if change.type == .added {
+                createNewConversation(change)
+            } else if change.type == .modified {
+                updateMessagesFromExistingConversation(change)
+            }
+        }
+    }
+    
+    private func createNewConversation(_ change: DocumentChange) {
+        // cast the change into Message object
+        guard var message = try? change.document.data(as: Message.self) else { return }
+        
+        // Do this because message.user above is nil when we fetch from DB
+        // Again, we need user because we need to fetch user's fullname and image
+        UserService.fetchUser(withId: message.chatPartnerId) { [weak self] user in
+            message.user = user
+            // Insert new message to the first index of array
+            self?.recentMessages.insert(message, at: 0)
+        }
+    }
+    
+    private func updateMessagesFromExistingConversation(_ change: DocumentChange) {
+        guard var message = try? change.document.data(as: Message.self) else { return }
+        // Check if there's arealdy an existing user.
+        guard let index = self.recentMessages.firstIndex(where: { $0.user?.id == message.chatPartnerId}) else { return }
+        // Becase we already same user at index,
+        // get that user for message.user, we don't have to fetch user.
+        message.user = self.recentMessages[index].user
+        // Remove Message object at index and
+        // add a new one to the first index so it can pop up
+        // as the first thing.
+        recentMessages.remove(at: index)
+        recentMessages.insert(message, at: 0)
+    }
+}
 
