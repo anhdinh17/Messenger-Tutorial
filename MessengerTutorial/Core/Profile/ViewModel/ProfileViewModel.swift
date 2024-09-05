@@ -37,6 +37,13 @@ class ProfileViewModel: ObservableObject {
         // And also update the imageUrl for User.
         guard let imageUrl = try await ImageUploader().uploadImage(uiImage) else {return}
         
+        // Fix Bug
+        // When select profile image, the profile image of Nav bar doesn't change.
+        // InboxView's viewModel listen to this property "currentUser"
+        // So changing this will change "viewModel.currentUser" in InboxView
+        // -> Nav Bar image changes.
+        UserService.shared.currentUser?.profileImageURL = imageUrl
+        
         guard let uid = Auth.auth().currentUser?.uid else { return }
         try await FirestoreConstants.UsersCollection.document(uid).updateData(
             // The key of dictionary must match the property name
