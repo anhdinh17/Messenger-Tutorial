@@ -52,6 +52,7 @@ struct InboxView: View {
             }
             .listStyle(.plain)
             .onAppear{
+                print("DEBUG: OnAppear of InboxView")
                 print("DEBUG: SHOWCHAT: \(showChat)")
                 print("DEBUG: ShowMessageView: \(showNewMessageView)")
             }

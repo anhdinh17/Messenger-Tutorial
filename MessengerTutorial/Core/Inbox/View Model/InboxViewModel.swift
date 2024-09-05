@@ -167,6 +167,9 @@ class InboxViewModel: ObservableObject {
 //MARK: - Appstuff's way to fix bug
 extension InboxViewModel {
     private func updateMessages(_ changes: [DocumentChange]) {
+        // snapshotListener will know if it's a new document added or
+        // an modified document.
+        // We don't have to check like what I did.
         for change in changes {
             if change.type == .added {
                 createNewConversation(change)

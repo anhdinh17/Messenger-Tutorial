@@ -334,8 +334,8 @@
             filePath = "MessengerTutorial/Core/Inbox/View/InboxView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -350,8 +350,8 @@
             filePath = "MessengerTutorial/Core/Inbox/View/InboxView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -664,14 +664,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E66787FE-29BF-4949-880C-7844F8F2C85C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MessengerTutorial/Core/Inbox/View Model/InboxViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
             landmarkName = "updateMessagesFromExistingConversation(_:)"
             landmarkType = "7">
          </BreakpointContent>
