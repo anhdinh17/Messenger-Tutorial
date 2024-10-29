@@ -22,6 +22,10 @@ class ProfileViewModel: ObservableObject {
         }
     }
     
+    init() {
+        print("ProfileViewModel init")
+    }
+    
     @Published var profileImage: Image?
     
     // Conversion from what we select from Photo Library to what

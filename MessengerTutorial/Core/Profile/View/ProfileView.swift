@@ -12,6 +12,11 @@ struct ProfileView: View {
     @StateObject var viewModel = ProfileViewModel()
     let user: User
     
+    init(user: User) {
+        self.user = user
+        print("ProfileView init")
+    }
+    
     var body: some View {
         VStack {
             // Profile Image
@@ -74,6 +79,6 @@ struct ProfileView: View {
     }
 }
 
-#Preview {
-    ProfileView(user: User.MOCK_USER)
-}
+//#Preview {
+//    ProfileView(user: User.MOCK_USER)
+//}
